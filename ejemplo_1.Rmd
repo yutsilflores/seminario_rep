@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #### el NORTE es más grande que el SUR
 
 Paso 1: Cargar datos 
-```{r}
+```{r, include = FALSE}
 #north
 north = state.area[which(state.region=="North Central")]
 names(north) = state.abb[which(state.region=="North Central")]
@@ -36,7 +36,7 @@ print(south)
 
 ### Y resolvamos la pregunta: ¿NORTE es más grande que SUR? 
 
-```{r}
+```{r, include = FALSE}
 my_test = sum(north) > sum(south)
 print(my_test)
 ```

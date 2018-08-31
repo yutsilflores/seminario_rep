@@ -139,13 +139,6 @@ $(document).ready(function () {
 <div id="el-norte-es-mas-grande-que-el-sur" class="section level4">
 <h4>el NORTE es más grande que el SUR</h4>
 <p>Paso 1: Cargar datos</p>
-<pre class="r"><code>#north
-north = state.area[which(state.region==&quot;North Central&quot;)]
-names(north) = state.abb[which(state.region==&quot;North Central&quot;)]
-
-#south
-south = state.area[which(state.region==&quot;South&quot;)]
-names(south) = state.abb[which(state.region==&quot;South&quot;)]</code></pre>
 <p>Como ya estan en mi ambiente, los puedo llamar en otro “code chunk”</p>
 <pre class="r"><code>print(north)</code></pre>
 <pre><code>##    IL    IN    IA    KS    MI    MN    MO    NE    ND    OH    SD    WI 
@@ -158,9 +151,6 @@ names(south) = state.abb[which(state.region==&quot;South&quot;)]</code></pre>
 </div>
 <div id="y-resolvamos-la-pregunta-norte-es-mas-grande-que-sur" class="section level3">
 <h3>Y resolvamos la pregunta: ¿NORTE es más grande que SUR?</h3>
-<pre class="r"><code>my_test = sum(north) &gt; sum(south)
-print(my_test)</code></pre>
-<pre><code>## [1] FALSE</code></pre>
 </div>
 <div id="ahora-mostremos-un-grafico-de-barras" class="section level3">
 <h3>Ahora mostremos un grafico de barras</h3>
