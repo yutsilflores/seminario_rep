@@ -1,0 +1,46 @@
+---
+title: "Main Analysis"
+author: "Yutsil Flores"
+date: "31 de agosto de 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Pregunta:
+
+#### ¿Qué región de EUA es mas grande: NORTE o SUR?
+
+## Hipotesis:
+
+#### el NORTE es más grande que el SUR
+
+Paso 1: Cargar datos 
+```{r}
+#north
+north = state.area[which(state.region=="North Central")]
+names(north) = state.abb[which(state.region=="North Central")]
+
+#south
+south = state.area[which(state.region=="South")]
+names(south) = state.abb[which(state.region=="South")]
+```
+Como ya estan en mi ambiente, los puedo llamar en otro "code chunk"
+
+```{r}
+print(north)
+print(south)
+```
+
+### Y resolvamos la pregunta: ¿NORTE es más grande que SUR? 
+
+```{r}
+my_test = sum(north) > sum(south)
+print(my_test)
+```
+### Ahora mostremos un grafico de barras
+```{r fig.cap = "Area de estados; norte en ROJO, sur en AZUL", echo=FALSE}
+barplot(north,south, col = c("red", "blue"))
+```
