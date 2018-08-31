@@ -36,7 +36,7 @@ print(south)
 
 ### Y resolvamos la pregunta: ¿NORTE es más grande que SUR? 
 
-```{r, include = FALSE}
+```{r}
 my_test = sum(north) > sum(south)
 print(my_test)
 ```
